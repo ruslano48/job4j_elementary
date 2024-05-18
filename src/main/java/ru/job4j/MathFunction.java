@@ -19,4 +19,4 @@ public static void main(String[] args) {
     int total = result1 + result2 + result1;
     System.out.println(total);
 }
-   }
+    }
