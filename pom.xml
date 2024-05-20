@@ -64,7 +64,7 @@
                     </execution>
                 </executions>
             </plugin>
-               </configuration>
+               </plugins>
     </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
