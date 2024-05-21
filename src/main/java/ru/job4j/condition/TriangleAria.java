@@ -9,6 +9,7 @@ public class TriangleAria {
         return result;
 
     }
+
     public static void main(String[] agrs) {
         double result = TriangleAria.area(2, 2, 2);
         System.out.println("area (2, 2, 2) = " + result);
