@@ -3,10 +3,7 @@ package ru.job4j.condition;
 public class TriangleAria {
     public static double area(double a, double b, double c) {
         double p = (a + b + c) / 2;
-        double s1 = p * (p - a) * (p - b) * (p - c);
-        double s = Math.sqrt(s1);
-        double result = s;
-        return result;
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
 
     }
 
