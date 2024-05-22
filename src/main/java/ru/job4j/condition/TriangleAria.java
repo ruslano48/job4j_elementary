@@ -12,3 +12,4 @@ public class TriangleAria {
         System.out.println("area (2, 2, 2) = " + result);
     }
 }
+
