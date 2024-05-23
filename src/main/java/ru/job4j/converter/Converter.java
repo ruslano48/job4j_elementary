@@ -8,21 +8,26 @@ public class Converter {
     }
 
     public static float rubleToDollar(float value) {
-        float result = value / 70;
+        float result = value / 60;
         return result;
     }
 
     public static void main(String[] args) {
         float input = 140;
         float expected = 2;
-        float output = Converter.rubleToDollar(input);
-        output = Converter.rubleToEuro(input);
+        float output = Converter.rubleToEuro(input);
         boolean passed = expected == output;
         System.out.println("140 rubles are 2. Test result : " + passed);
+        input = 120;
+        expected = 2;
+        output = Converter.rubleToDollar(input);
+        passed = expected == output;
+        System.out.println("120 rubles are 2. Test result : " + passed);
         float euro = rubleToEuro(140);
         float dollar = rubleToDollar(140);
         System.out.println("140 rubles are " + euro + " euro.");
         System.out.println("140 rubles are " + dollar + "dollar.");
+
     }
 
 }
