@@ -32,6 +32,7 @@ class ConverterTest {
         float value = 0.0001f;
         assertThat(output).isEqualTo(expected, withPrecision(value));
     }
+
     @Test
     void whenConvert210RblThen3Euro() {
         float input = 210;
