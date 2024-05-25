@@ -28,3 +28,4 @@ public class MathCalculator {
         System.out.println("Результат расчета sumMethod равен: " + sumMethod(first, second));
     }
 }
+
