@@ -7,7 +7,6 @@ public class MathCalculator {
     public static double sumAndMultiply(double first, double second) {
         return sum(first, second)
                 + multiply(first, second);
-
     }
 
     public static double minusAndDiv(double first, double second) {
