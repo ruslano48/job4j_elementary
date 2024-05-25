@@ -5,6 +5,7 @@ import static ru.job4j.math.MathFunction.*;
 public class MathCalculator {
 
     public static double sumAndMultiply(double first, double second) {
+
         return sum(first, second)
                 + multiply(first, second);
     }
@@ -15,6 +16,7 @@ public class MathCalculator {
     }
 
     public static double sumMethod(double first, double second) {
+
         return sumAndMultiply(first, second) + minusAndDiv(first, second);
     }
 
