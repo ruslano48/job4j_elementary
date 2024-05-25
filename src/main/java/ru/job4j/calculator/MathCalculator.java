@@ -11,9 +11,10 @@ public class MathCalculator {
     }
 
     public static double minusAndDiv(double first, double second) {
-        return   minus(second, first)
+        return minus(second, first)
                 + div(second, first);
     }
+
     public static double sumMethod(double first, double second) {
         return sumAndMultiply(first, second) + minusAndDiv(first, second);
     }
