@@ -21,4 +21,3 @@ public class DummyBot {
         System.out.println(result);
     }
 }
-
