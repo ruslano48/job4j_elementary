@@ -18,7 +18,7 @@ class X2Test {
     }
 
     @Test
-    void whenA1B1C1X1Then40() {
+    void whenA1B1C1X1Then3() {
         int a = 1;
         int b = 1;
         int c = 1;
@@ -30,7 +30,7 @@ class X2Test {
     }
 
     @Test
-    void whenABCXThen40() {
+    void whenABCXThen2() {
         int a = 0;
         int b = 1;
         int c = 1;
@@ -41,7 +41,7 @@ class X2Test {
     }
 
     @Test
-    void whenA1BCXThen40() {
+    void whenA1BCXThen2() {
         int a = 1;
         int b = 0;
         int c = 1;
@@ -52,7 +52,7 @@ class X2Test {
     }
 
     @Test
-    void whenA1B1CXThen40() {
+    void whenA1B1CXThen1() {
         int a = 1;
         int b = 1;
         int c = 1;
