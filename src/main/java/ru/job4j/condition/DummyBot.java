@@ -13,13 +13,12 @@ public class DummyBot {
 
     public static void main(String[] args) {
         String result = DummyBot.answer("Hi, Bot.");
-        System.out.println(result); // Ожидается: "Hi, SmartAss."
+        System.out.println(result);
 
         result = DummyBot.answer("Bye.");
-        System.out.println(result); // Ожидается: "See you later."
-
+        System.out.println(result);
         result = DummyBot.answer("How are you?");
-        System.out.println(result); // Ожидается: "I don't know. Please, ask another question."
+        System.out.println(result);
     }
 }
 
