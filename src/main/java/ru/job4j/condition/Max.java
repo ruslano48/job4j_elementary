@@ -7,8 +7,6 @@ public class Max {
     }
 
     public static void main(String[] agrs) {
-
-
         int a = 10;
         int b = 5;
         int maxResult = max(a, b);
