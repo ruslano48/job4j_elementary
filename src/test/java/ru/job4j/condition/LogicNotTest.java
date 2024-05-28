@@ -72,7 +72,7 @@ class LogicNotTest {
     void whenNumIs0NotPositiveFalse() {
         int num = 0;
         boolean result = LogicNot.notPositive(num);
-        assertThat(result).isFalse();
+        assertThat(result).isTrue();
     }
 
     @Test
