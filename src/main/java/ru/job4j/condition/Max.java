@@ -13,5 +13,3 @@ public class Max {
         System.out.println("The maximum of " + a + " and " + b + " is " + maxResult);
     }
 }
-
-
