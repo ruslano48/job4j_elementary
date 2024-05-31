@@ -26,6 +26,7 @@ class CounterTest {
         int finish = 2;
         int expented = 0;
     }
+
     @Test
     void whenSumEvenNumbersFromOneToTenThenThirty() {
         int start = 1;
@@ -34,6 +35,7 @@ class CounterTest {
         int expected = 30;
         assertThat(result).isEqualTo(expected);
     }
+
     @Test
     void whenSumEvenNumbersFromTwoToTwelveThenFortyTwo() {
         int start = 2;
@@ -43,8 +45,9 @@ class CounterTest {
         assertThat(result).isEqualTo(expected);
 
     }
+
     @Test
-    void  whenSumEvenNumbersFromMinTwoToTwelveThenFortyTwo() {
+    void whenSumEvenNumbersFromMinTwoToTwelveThenFortyTwo() {
         int start = -2;
         int finish = 12;
         int result = Counter.sumByEven(start, finish);
