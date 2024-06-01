@@ -1,6 +1,7 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class FactorialTest {
@@ -11,6 +12,7 @@ class FactorialTest {
         int output = Factorial.calculate(number);
         assertThat(output).isEqualTo(expected);
     }
+
     @Test
     void whenCalculateFactorialForZeroThenOne() {
         int expected = 1;
@@ -19,4 +21,3 @@ class FactorialTest {
         assertThat(output).isEqualTo(expected);
     }
 }
-
