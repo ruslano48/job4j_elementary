@@ -4,19 +4,15 @@ public class AlgoArray {
     public static void main(String[] args) {
 
         int[] array = new int[]{5, 3, 2, 1, 4};
-
-        for (int i = 0; i < array.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[minIndex]) {
-                    minIndex = j;
-                }
-            }
-
-            int temp = array[i];
-            array[i] = array[minIndex];
-            array[minIndex] = temp;
-        }
+        int temp = array[0];
+        array[0] = array[3];
+        array[3] = temp;
+        temp = array[1];
+        array[1] = array[2];
+        array[2] = temp;
+        temp = array[3];
+        array[3] = array[4];
+        array[4] = temp;
 
         for (int index = 0; index < array.length; index++) {
             System.out.println(array[index]);
