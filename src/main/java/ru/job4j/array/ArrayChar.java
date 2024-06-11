@@ -5,7 +5,6 @@ public class ArrayChar {
         if (prefix.length > word.length) {
             return false;
         }
-
         for (int i = 0; i < prefix.length; i++) {
             if (word[i] != prefix[i]) {
                 return false;
