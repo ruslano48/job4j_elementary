@@ -1,6 +1,7 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class FindLoopTest {
@@ -18,6 +19,61 @@ class FindLoopTest {
         int[] data = new int[]{5, 9, 3};
         int element = 10;
         int result = FindLoop.indexOf(data, element);
+        int expected = -1;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiapasonHas8ThenResultEqualFinish() {
+        int[] data = new int[]{5, 2, 10, 2, 4, 8, 14, 3, 21, 16};
+        int element = 8;
+        int start = 2;
+        int finish = 5;
+        int result = FindLoop.indexInRange(data, element, start, finish);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiapasonHasSomeEqualElementThen3() {
+        int[] data = new int[]{5, 10, 2, 4, 8, 4, 14, 4, 3, 21, 16};
+        int element = 4;
+        int start = 1;
+        int finish = 8;
+        int result = FindLoop.indexInRange(data, element, start, finish);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiapasonHas2Then3() {
+        int[] data = new int[]{5, 2, 10, 2, 4};
+        int element = 2;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexInRange(data, element, start, finish);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiapasonHas7Then5() {
+        int[] data = new int[]{5, 2, 10, 2, 4, 7, 11, 32, 14};
+        int element = 7;
+        int start = 4;
+        int finish = 6;
+        int result = FindLoop.indexInRange(data, element, start, finish);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiapasonHas42Then() {
+        int[] data = new int[]{5, 2, 10, 2, 4, 18, 36};
+        int element = 42;
+        int start = 1;
+        int finish = 6;
+        int result = FindLoop.indexInRange(data, element, start, finish);
         int expected = -1;
         assertThat(result).isEqualTo(expected);
     }
