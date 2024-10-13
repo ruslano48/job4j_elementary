@@ -1,6 +1,7 @@
 package ru.job4j.condition;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MaxTest {
@@ -39,7 +40,52 @@ class MaxTest {
         int expected = 1;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void whenMaxOfTwoNumbersThenReturnMax() {
+        int result = Max.max(10, 5);
+        assertThat(result).isEqualTo(10);
+    }
+
+    @Test
+    public void whenMaxOfTwoNumbersThenReturnMax2() {
+        int result = Max.max(5, 10);
+        assertThat(result).isEqualTo(10);
+    }
+
+    @Test
+    public void whenMaxOfThreeNumbersThenReturnMax() {
+        int result = Max.max(10, 5, 20);
+        assertThat(result).isEqualTo(20);
+    }
+
+    @Test
+    public void whenMaxOfThreeNumbersWithNegative() {
+        int result = Max.max(-10, -5, -20);
+        assertThat(result).isEqualTo(-5);
+    }
+
+    @Test
+    public void whenMaxOfFourNumbersThenReturnMax() {
+        int result = Max.max(10, 5, 20, 15);
+        assertThat(result).isEqualTo(20);
+    }
+
+    @Test
+    public void whenMaxOfFourNumbersWithNegatives() {
+        int result = Max.max(-10, -5, -20, -15);
+        assertThat(result).isEqualTo(-5);
+    }
+
+    @Test
+    public void whenAllNumbersAreEqual() {
+        int result = Max.max(5, 5, 5);
+        assertThat(result).isEqualTo(5);
+    }
+
+    @Test
+    public void whenAllFourNumbersAreEqual() {
+        int result = Max.max(5, 5, 5, 5);
+        assertThat(result).isEqualTo(5);
+    }
 }
-
-
-
