@@ -1,50 +1,39 @@
 package ru.job4j.condition;
 
-import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-class PointTest {
+public class PointTest {
+
     @Test
-    void when00to20then2() {
-        double expected = 2;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    public void whenPointsAreSameThenDistanceIsZero() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 0);
+        double result = a.distance(b);
+        assertEquals(0.0, result, 0.001);
     }
 
     @Test
-    void when11to20then2() {
-        double expected = 2;
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 2;
-        int y2 = 0;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    public void whenPointsAreVerticalThenDistanceIsCorrect() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double result = a.distance(b);
+        assertEquals(2.0, result, 0.001);
     }
 
     @Test
-    void minus() {
-        double expected = 2;
-        int x1 = -1;
-        int y1 = -1;
-        int x2 = -2;
-        int y2 = 0;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    public void whenPointsAreHorizontalThenDistanceIsCorrect() {
+        Point a = new Point(0, 0);
+        Point b = new Point(3, 0);
+        double result = a.distance(b);
+        assertEquals(3.0, result, 0.001);
     }
 
     @Test
-    void when11to21then1() {
-        double expected = 1;
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 2;
-        int y2 = 1;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    public void whenPointsAreDiagonalThenDistanceIsCorrect() {
+        Point a = new Point(0, 0);
+        Point b = new Point(3, 4);
+        double result = a.distance(b);
+        assertEquals(5.0, result, 0.001);
     }
 }
